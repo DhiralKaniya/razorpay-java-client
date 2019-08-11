@@ -19,7 +19,9 @@ Reference link:- [Razorpay link](https://docs.razorpay.com/docs).
 **_Below steps are the test account. User of that will not charge from their bank and below is used for testing purpose only._**
 
 ### Step 1 - Create order via API
-- Here we will create an order
+- Here we will create an order via hosted API.
+- UI - can call this API on click of user amount selection or order create.
+
 #### Request
 ```
 Request URL :- https://glacial-earth-89199.herokuapp.com/payment/order_create
@@ -50,6 +52,60 @@ Note:- Copy or make note of `razorpayOrderId` and `amount` will use in next step
 
 
 ### Step 2 - Razorpay checkout form with amount and order id
+- Use below UI form that call hosted checkout form of razorpay.
+#### Request
+```
+<html>
+    <form method="POST" action="https://api.razorpay.com/v1/checkout/embedded">
+    <input type="hidden" name="key_id" value="<secret-key-id>" />
+    <input type="hidden" name="amount" value="<amount>">
+    <input type="hidden" name="order_id" value="<razorpay-order-id>">
+    <input type="hidden" name="prefill[name]" value="<person name>">
+    <input type="hidden" name="prefill[contact]" value="<person contact number>">
+    <input type="hidden" name="prefill[email]" value="<person email id>">
+    <input type="hidden" name="callback_url" value="https://glacial-earth-89199.herokuapp.com/callback_url">
+    <button>Submit</button>
+    </form>
+</html>
+```
+`<razorpay-order-id>` -> would be the id from step 1.
+`<amount>` -> would be the same.
 
+#### Resonse
+````
+{
+	status: true,
+	description: "Success",
+	responseObejct: [{
+		id: 13,
+		razorpayOrderId: "order_D4hRIFmezNT1Kw",
+		razorpayPaymentId: "pay_D4hRl7pv5zhIpH",
+		status: "CALLBACK_CALL",
+		razorpayStatus: "Attempted",
+		created_at: "2019-08-11T17:01:05.000+0000",
+		amount: 10000
+	}]
+}
+````
+Note:- Copy `razorpayPaymentId` will use in next step.
 
 ### Step 3 - Capture payment via backend API
+
+- This is the last steps that ensure capture payment and tell razorpay successful enrollment.
+- Use below Test API for capture api.
+#### Request
+````
+Request URL :- https://glacial-earth-89199.herokuapp.com/payment/capture_payment/<payment-id>
+Header :- Content-Type:application/json
+````
+#### Response
+````
+{
+    "status": true,
+    "description": "capture payment status",
+    "responseObejct": "success"
+}
+````
+
+#### Note:- I would strongly recommended to use Angular 6 or greater or react UI technology. UI person has knowledge of rest api call and handle multiple call-back.
+
