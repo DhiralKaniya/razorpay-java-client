@@ -106,6 +106,7 @@ Header :- Content-Type:application/json
     "responseObejct": "success"
 }
 ````
+<payment-id> -> would be the payment id which you get from step 2.
 
 #### Note:- I would strongly recommended to use Angular 6 or greater or react UI technology. UI person has knowledge of rest api call and handle multiple call-back.
 
