@@ -16,7 +16,7 @@ Reference link:- [Razorpay link](https://docs.razorpay.com/docs).
 - Clone this repo (if not clone)
 - Replace your razorpay key and secret in com.razorpay.client.razorpay.CustomRazopayClient
 
-*Below steps are the test account. User of that will not charge from their bank and below is used for testing purpose only.*
+**_Below steps are the test account. User of that will not charge from their bank and below is used for testing purpose only._**
 
 ### Step 1 - Create order via API
 - Here we will create an order
