@@ -18,9 +18,9 @@ Reference link:- [Razorpay link](https://docs.razorpay.com/docs).
 
 *Below steps are the test account. User of that will not charge from their bank and below is used for testing purpose only.*
 
-###Step 1 - Create order via API
+### Step 1 - Create order via API
 - Here we will create an order
-####Request
+#### Request
 ```
 Request URL :- https://glacial-earth-89199.herokuapp.com/payment/order_create
 Method :- POST
@@ -31,7 +31,7 @@ Body :-
 }
 ```
 
-####Response
+#### Response
 ```
 {
     "status": true,
