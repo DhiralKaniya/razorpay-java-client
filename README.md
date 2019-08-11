@@ -4,7 +4,7 @@
 This is razorpay payment integration with Java client.
 This repo covers the easiest steps to integration of Razorpay in backend Java and front-end(Angular or React).
 
-Reference link:- [Razorpay link](https://docs.razorpay.com/docs).
+Reference API link:- [Razorpay link](https://docs.razorpay.com/docs).
 
 **Strongly recommended to lean hosted checkout flow form for below link**
 - [Click here](https://razorpay.com/docs/payment-gateway/web-integration/hosted/)
