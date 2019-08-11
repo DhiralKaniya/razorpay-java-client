@@ -6,17 +6,17 @@ This repo covers the easiest steps for integration of Razorpay in backend Java a
 
 Reference link:- [Razorpay link](https://docs.razorpay.com/docs).
 
-** Strongly recommended to under hosted checkout form for below link **
+**Strongly recommended to under hosted checkout form for below link**
 - [Click here](https://razorpay.com/docs/payment-gateway/web-integration/hosted/)
 
-** To integrate your razorpay account follow below steps **
+**To integrate your razorpay account follow below steps**
 
 - Copy your key_id and secert from Razorpay Dashboard.
    - Login to razorpay -> Settings -> API Keys
 - Clone this repo (if not clone)
 - Replace your razorpay key and secret in com.razorpay.client.razorpay.CustomRazopayClient
 
-* Below steps are the test account. User of that will not charge from their bank and below is used for testing purpose only. *
+*Below steps are the test account. User of that will not charge from their bank and below is used for testing purpose only.*
 
 ### Step 1 - Create order via API
 - Here we will create an order
